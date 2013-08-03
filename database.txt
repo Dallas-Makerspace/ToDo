@@ -1,0 +1,53 @@
+things
+	id
+	name
+	created
+	description
+	admin_notes Only set by admin
+	approved tinyint(1)	Only set by admin
+	base_points Default 0, can be set by admin
+	vote_count
+	comment_count
+	completed tinyint(1)
+
+comments
+	id
+	thing_id
+	created
+	username
+	text
+
+things_tags (join table)
+	id
+	thing_id
+	tag_id
+
+tags
+	id
+	name
+	color
+
+completions (join table)
+	id
+	created
+	thing_id
+	maker_id
+
+votes (join table)
+	id
+	created
+	thing_id
+	maker_id
+
+makers
+	id
+	username
+	points
+
+images
+	id
+	thing_id
+	created
+	name
+	type
+	size

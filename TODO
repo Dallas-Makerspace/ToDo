@@ -1,0 +1,9 @@
+Oh so much...
+
+$ grep -nr TODO app/*
+app/Controller/UsersController.php:98:			// TODO: Not yet implimented
+app/Controller/UsersController.php:101:			// TODO: Not yet implimented
+app/Model/Datasource/LdapSource.php:1109:				//TODO  add in code to strip models if people try to use model notation like 'User.cn'=>'foobar' etc.
+app/Model/Datasource/LdapSource.php:1198:					// TODO pb ldap_search & $queryData['limit']
+app/View/Things/add.ctp:15:				<!-- TODO: Make the buttons the same colors as their tags -->
+app/View/Helper/QrcodeHelper.php:5: * TODO: better checking of limits and valid inputs

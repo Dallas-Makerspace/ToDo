@@ -1,0 +1,50 @@
+body {
+	padding: 50px 15px 15px 15px;
+}
+.navbar-form {
+	padding-top: 5px;
+}
+.navbar-form input {
+	width: 125px;
+	height: 25px;
+}
+.alert {
+	margin: 20px 0 0 0;
+}
+.null {
+	color: #CCC;
+	font-style: italic;
+}
+th .asc:after {
+	content: ' ⇣';
+}
+th .desc:after {
+	content: ' ⇡';
+}
+textarea.form-control {
+	height: 174px;
+}
+.radio-inline, .checkbox-inline, .radio-inline+.radio-inline, .checkbox-inline+.checkbox-inline {
+	margin-left: 0;
+	padding-right: 10px;
+}
+.btn input[type="checkbox"] {
+	display: none;
+}
+.checkbox-buttons .btn {
+	margin-bottom: 5px;
+}
+
+.btn-temp {
+  color: #ffffff;
+  background-color: #474949;
+  border-color: #474949;
+}
+.btn-temp:hover,
+.btn-temp:focus {
+  background-color: #3a3c3c;
+  border-color: #2e2f2f;
+}
+.btn-temp.active {
+	background-color: #5cb85c;
+}
