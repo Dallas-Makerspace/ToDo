@@ -230,7 +230,7 @@ class LdapSource extends DataSource {
     * @access public
     */
 	function __destruct() {
-		$this->close();
+		$this->disconnect();
 		parent::__destruct();
 	}
 
@@ -334,18 +334,6 @@ class LdapSource extends DataSource {
 		    $this->log("Auth Error: for '$dn': ".$this->lastError(),'ldap.error');
 		    return $this->lastError();
 		}
-	}
-	
-	/**
-	 * Disconnects database, kills the connection and says the connection is closed,
-	 * and if DEBUG is turned on, the log for this object is shown.
-	 *
-	 */
-	function close() {
-		if ($this->fullDebug ) {
-			$this->showLog();
-		}
-		$this->disconnect();
 	}
 	
 	/**

@@ -34,17 +34,17 @@ textarea.form-control {
 .checkbox-buttons .btn {
 	margin-bottom: 5px;
 }
-
 .btn-temp {
-  color: #ffffff;
-  background-color: #474949;
-  border-color: #474949;
+	color: #ffffff;
+	background-color: #474949;
+	border-color: #474949;
 }
 .btn-temp:hover,
 .btn-temp:focus {
-  background-color: #3a3c3c;
-  border-color: #2e2f2f;
+	background-color: #3a3c3c;
+	border-color: #2e2f2f;
 }
 .btn-temp.active {
 	background-color: #5cb85c;
+	color: #000000;
 }

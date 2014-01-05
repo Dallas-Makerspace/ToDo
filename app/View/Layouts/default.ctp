@@ -63,6 +63,9 @@
 	echo $this->Html->script('jquery-1.10.2.min') . "\n";
 	echo $this->Html->script('bootstrap.min') . "\n";
 	echo $this->Js->writeBuffer(); // Write cached scripts
+	if (Configure::read('debug') > 1) {
+		echo $this->Html->div('debug',$this->element('sql_dump'));
+	}
 ?>
 	</body>
 </html>

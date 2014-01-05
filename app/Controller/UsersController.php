@@ -17,6 +17,10 @@ class UsersController extends AppController {
  * @return void
  */
 	public function login() {
+		// If they are already logged in, redirect them to the home page
+		if($this->Auth->user()) {
+			$this->redirect(array('controller' => 'things', 'action' => 'index'));
+		}
 		if ($this->request->is('post')) {
 			$username = strtolower($this->request->data['User']['username']);
 			$result = $this->User->find('first',array('conditions' => array('uid' => $username)));
@@ -35,7 +39,7 @@ class UsersController extends AppController {
 				// User must be in the "members" group to login
 				if (in_array('members',$user['User']['groups'])) {
 					$this->Auth->login($user);
-					$this->redirect($this->Auth->redirect());
+					$this->redirect($this->referer());
 				} else {
 					// Account exists, but is not in the right groups
 					$this->Session->setFlash(__('Authorization failure. Your account is inactive.'),'alert-error');
