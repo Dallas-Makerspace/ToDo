@@ -2,8 +2,6 @@
 /**
  * CakeTestFixture file
  *
- * PHP 5
- *
  * CakePHP(tm) Tests <http://book.cakephp.org/2.0/en/development/testing.html>
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -111,7 +109,6 @@ class StringsTestFixture extends CakeTestFixture {
 	);
 }
 
-
 /**
  * CakeTestFixtureImportFixture class
  *
@@ -175,7 +172,6 @@ class FixturePrefixTest extends Model {
 	public $useDbConfig = 'test';
 }
 
-
 /**
  * Test case for CakeTestFixture
  *
@@ -189,6 +185,7 @@ class CakeTestFixtureTest extends CakeTestCase {
  * @return void
  */
 	public function setUp() {
+		parent::setUp();
 		$methods = array_diff(get_class_methods('DboSource'), array('enabled'));
 		$methods[] = 'connect';
 
@@ -204,6 +201,7 @@ class CakeTestFixtureTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
+		parent::tearDown();
 		unset($this->criticDb);
 		$this->db->config = $this->_backupConfig;
 	}

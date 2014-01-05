@@ -2,8 +2,6 @@
 /**
  * CacheHelper helps create full page view caching.
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -67,7 +65,8 @@ class CacheHelper extends AppHelper {
  * Parses the view file and stores content for cache file building.
  *
  * @param string $viewFile
- * @return void
+ * @param string $output The output for the file.
+ * @return string Updated content.
  */
 	public function afterRenderFile($viewFile, $output) {
 		if ($this->_enabled()) {

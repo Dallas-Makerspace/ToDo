@@ -1,7 +1,6 @@
 <?php
 /**
  *
- * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -21,7 +20,6 @@
 <h2><?php echo __d('cake', 'View %s', $singularHumanName); ?></h2>
 	<dl>
 <?php
-$i = 0;
 foreach ($scaffoldFields as $_field) {
 	$isKey = false;
 	if (!empty($associations['belongsTo'])) {
@@ -98,7 +96,6 @@ foreach ($associations['hasOne'] as $_alias => $_details): ?>
 <?php if (!empty(${$singularVar}[$_alias])): ?>
 	<dl>
 <?php
-		$i = 0;
 		$otherFields = array_keys(${$singularVar}[$_alias]);
 		foreach ($otherFields as $_field) {
 			echo "\t\t<dt>" . Inflector::humanize($_field) . "</dt>\n";

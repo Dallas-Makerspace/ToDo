@@ -4,8 +4,6 @@
  *
  * Automatic forms and actions generation for rapid web application development.
  *
- * PHP 5
- *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -329,10 +327,9 @@ class Scaffold {
 	protected function _sendMessage($message) {
 		if ($this->_validSession) {
 			$this->controller->Session->setFlash($message);
-			$this->controller->redirect($this->redirect);
-		} else {
-			$this->controller->flash($message, $this->redirect);
+			return $this->controller->redirect($this->redirect);
 		}
+		$this->controller->flash($message, $this->redirect);
 	}
 
 /**

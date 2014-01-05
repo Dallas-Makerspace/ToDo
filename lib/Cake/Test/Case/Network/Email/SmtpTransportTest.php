@@ -2,8 +2,6 @@
 /**
  * SmtpTransportTest file
  *
- * PHP 5
- *
  * CakePHP(tm) Tests <http://book.cakephp.org/2.0/en/development/testing.html>
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -82,6 +80,7 @@ class SmtpTransportTest extends CakeTestCase {
  * @return void
  */
 	public function setUp() {
+		parent::setUp();
 		if (!class_exists('MockSocket')) {
 			$this->getMock('CakeSocket', array('read', 'write', 'connect', 'enableCrypto'), array(), 'MockSocket');
 		}

@@ -4,8 +4,6 @@
  *
  * Test the Acl Behavior
  *
- * PHP 5
- *
  * CakePHP : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -226,6 +224,7 @@ class AclBehaviorTest extends CakeTestCase {
  * @return void
  */
 	public function testSetup() {
+		parent::setUp();
 		$User = new AclUser();
 		$this->assertTrue(isset($User->Behaviors->Acl->settings['User']));
 		$this->assertEquals('requester', $User->Behaviors->Acl->settings['User']['type']);
